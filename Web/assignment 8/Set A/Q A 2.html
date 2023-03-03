@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body style="text-align:center; font-size:30px;">
+<input type="text" id="no" placeholder="Enter number">
+<input type="submit" onclick="perfect()">
+
+<br><br><b id="per"></i>
+
+</body>
+<script>
+function perfect(){
+var i,j=0;
+var x = document.getElementById("no").value;
+
+	for(i=1;i<=x/2;i++)
+	{ 
+		if(x%i===0)
+		{
+			j=j+i;
+		}
+	}
+	
+	if(j==x)
+	{
+		document.getElementById("per").innerHTML="The number is a perfect number."; 
+	}
+	else
+	{
+		document.getElementById("per").innerHTML="The number is not a perfect number.";
+	}
+}
+
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align:center;font-size:40px;">
+<input type="text" id="tex" placeholder="Enter Number">
+<input type="submit" onclick="armstrong()">
+<br><br><b id="ans"></b>
+</body>
+<script>
+ function armstrong(){
+    var num,rem,result = 0,original;
+    num = document.getElementById("tex").value;
+    original = num;
+    while(num!=0)
+    {
+        rem = num%10;
+        result = result + rem*rem*rem;
+        num= parseInt(num/10);
+    }
+    if(result == original)
+    {
+        document.getElementById("ans").innerHTML="It is Armstrong number";	
+    }
+    else
+    {
+	document.getElementById("ans").innerHTML="It is not Armstrong number"; 
+    }
+}
+</script>
+</html>

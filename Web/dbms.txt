@@ -1,0 +1,99 @@
+Server [localhost]:
+Database [postgres]:
+Port [5432]:
+Username [postgres]:
+Password for user postgres:
+psql (9.6.4)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=# \c bank;
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+You are now connected to database "bank" as user "postgres".
+bank=#
+bank=# \d
+              List of relations
+ Schema |       Name       | Type  |  Owner
+--------+------------------+-------+----------
+ public | bcl              | table | postgres
+ public | branch           | table | postgres
+ public | customer         | table | postgres
+ public | loan_application | table | postgres
+ public | v1               | view  | postgres
+ public | v_cust_loan      | view  | postgres
+ public | v_loan_apply     | view  | postgres
+(7 rows)
+
+
+bank=# \d
+              List of relations
+ Schema |       Name       | Type  |  Owner
+--------+------------------+-------+----------
+ public | bcl              | table | postgres
+ public | branch           | table | postgres
+ public | customer         | table | postgres
+ public | loan_application | table | postgres
+ public | v1               | view  | postgres
+ public | v_cust_loan      | view  | postgres
+ public | v_loan_apply     | view  | postgres
+(7 rows)
+
+
+bank=# \dServer [localhost]:
+Database [postgres]:
+Port [5432]:
+Username [postgres]:
+Password for user postgres:
+psql (9.6.4)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=# \c bank;
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+You are now connected to database "bank" as user "postgres".
+bank=#
+bank=# \d
+              List of relations
+ Schema |       Name       | Type  |  Owner
+--------+------------------+-------+----------
+ public | bcl              | table | postgres
+ public | branch           | table | postgres
+ public | customer         | table | postgres
+ public | loan_application | table | postgres
+ public | v1               | view  | postgres
+ public | v_cust_loan      | view  | postgres
+ public | v_loan_apply     | view  | postgres
+(7 rows)
+
+
+bank=# \d
+              List of relations
+ Schema |       Name       | Type  |  Owner
+--------+------------------+-------+----------
+ public | bcl              | table | postgres
+ public | branch           | table | postgres
+ public | customer         | table | postgres
+ public | loan_application | table | postgres
+ public | v1               | view  | postgres
+ public | v_cust_loan      | view  | postgres
+ public | v_loan_apply     | view  | postgres
+(7 rows)
+
+
+bank=#

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="text" placeholder="Enter Number"id="tex">
+<input type="submit" onclick="display()">
+<b id="ans"></b>
+</body>
+
+<script>
+
+function display(){
+
+var x=document.getElementById("tex").value;
+var i,a,b=1;
+var arr=[];
+for(i=0;x!=0;i++)
+{
+ a=x%10;
+ arr[i]=a;
+ x=parseInt(x/10);
+ b++;
+}
+arr.reverse();
+for(i=0;i<b;i++)
+{console.log(arr[i]);
+if(arr[i]==0)
+{
+document.write("Zero ");
+}
+if(arr[i]==1)
+{
+document.write("One ");
+}
+if(arr[i]==2)
+{
+document.write("Two ");
+}
+if(arr[i]==3)
+{
+document.write("Three ");
+}
+if(arr[i]==4)
+{
+document.write("Four ");
+}
+if(arr[i]==5)
+{
+document.write("Five ");
+}
+if(arr[i]==6)
+{
+document.write("Six ");
+}
+if(arr[i]==7)
+{
+document.write("Seven ");
+}
+if(arr[i]==8)
+{
+document.write("Eight ");
+}
+if(arr[i]==9)
+{
+document.write("Nine ");
+}
+}
+}
+
+</script>
+
+
+</html>

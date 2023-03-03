@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<style>
+*{
+box-sizing:border-box;
+}
+header
+{
+font-size:50px;
+padding:20px;
+}
+nav
+{
+float:left;
+font-size:30px;
+width:20%;
+padding:10px;
+height:300px;
+}
+article
+{
+float:left;
+width:80%;
+font-size:30px;
+padding:10px;
+height:300px;
+}
+footer
+{
+font-size:50px;
+padding:20px;
+}
+header,nav,art,footer
+{
+border:1px solid black;
+border-collapse:collapse;
+}
+section::after 
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 600px)
+ {
+  nav, article 
+  {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+<body>
+<header>
+<h1>This is a header.</h1>
+</header>
+<section>
+
+<nav>
+
+     <b>Look in the box at the right for some information.</b>
+
+</nav>
+
+<article>
+
+         <p>Here is somne information</p>
+
+</article>
+
+</section>
+<footer>
+<h2>This is a footer.</h2>
+</footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align:center;font-size:40px;">
+<input type="text" id="tex" placeholder="Enter numbner">
+<input type="submit" onclick="fact()"><br><br>
+<b id="ans"></b>
+</body>
+<script>
+function fact(){
+var x=document.getElementById("tex").value;
+var arr=[];
+var i,j,a=0,b;
+for(i=0;i<=x;i++)
+{
+ if(x%i==0)
+ {
+  arr[a]=parseInt(i);
+  a++;
+ }
+}
+document.write("factors of number "+x+" are:");
+for(i=0;i<a;i++)
+{
+document.write(arr[i]+"  ,");
+}
+}
+
+</script>
+</html>

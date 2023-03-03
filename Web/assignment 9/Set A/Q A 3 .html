@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body style="font-size:30px;text-align:center;">
+<b>Display an array </b><input type="submit" onclick="display()"><br><br>
+<b>sort an array </b><input type="submit" onclick="sort()"><br><br>
+<b>Reverse an array </b><input type="submit" onclick="reverse()"><br><br>
+<b>Seacrch element in  an array </b><input type="submit" onclick="search()"><br><br>
+<br><br><b id="ans"></b>
+</body>
+<script>
+var arr=[5,3,2,4,1];
+function display(){
+document.write("Array elements are:");
+for(var i=0;i<5;i++)
+{
+    document.write(arr[i]+", ");
+}
+}
+function sort()
+{
+for(var i=0;i<5;i++)
+{
+for(var j=i+1;j<5;j++)
+{
+if(arr[i]>arr[j])
+{
+var a=arr[i];
+arr[i]=arr[j];
+arr[j]=a;
+}
+}
+}
+document.getElementById("ans").innerHTML="Array is sorted run display to see";
+}
+</script>
+</html>

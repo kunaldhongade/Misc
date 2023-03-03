@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align:center;font-size:30px;">
+<b>Enter number of digits of fibonacci serise to print</b><br><input type="text" id="tex" placeholder="Enter Number">
+<input type="submit" onclick="fibo()"><br><br>
+<b id="ans"></b>
+</body>
+<script>
+ 
+function fibo(){
+var x=document.getElementById("tex").value;
+var a=0,b=1,i,c;
+
+document.write("Fibonacci serise is: 0 , 1 , ");
+for(i=2;i<x;i++)
+{
+c=parseInt(a+b);
+document.write(""+c+" ,");
+a=parseInt(b);
+b=parseInt(c);
+}
+}
+</script>
+</html>

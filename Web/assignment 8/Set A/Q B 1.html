@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="text" placeholder="Enter Number"id="tex">
+<input type="submit" onclick="prime()"><br><br>
+<i id="ans">
+</body>
+<script>
+
+function prime(){
+var i,j=0,c;
+var x = document.getElementById("tex").value;
+    document.write("The prime Number Between 1 to"+x+" are:");
+	for(j=2;j<=x;j++)
+	{
+	c=0
+	for(i=2;i<=j/2;i++)
+	{ 
+		if(j%i==0)
+		{
+		 c++;
+		 break;
+		}
+		
+	}
+	if(c==0 && j!=1)
+	{
+	 document.write(j+"  ");
+	}
+
+	}
+}
+</script>
+</html>

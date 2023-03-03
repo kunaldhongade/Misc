@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body style="text-align:center;font-size:30px;">
+<input type="text" class="text" id="no"placeholder="Enter number">   
+<input type="submit" onclick="factorial()">
+<br><br><b id="fact"></b>
+</body>
+<script>
+function factorial(){
+var i,f=1;
+var a=document.getElementById("no").value;
+for(i=1;i<=a;i++)
+{
+f=f*i;
+}
+i=i-1;
+document.getElementById("fact").innerHTML="Factorial of number "+i+" is "+f;
+}
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align:center;font-size:40px;">
+<input type="text" id="tex" placeholder="Enter number">
+<input type="submit" onclick="rev()"><br><br>
+<i id="ans"></i>
+</body>
+<script>
+
+function rev(){
+var x=document.getElementById("tex").value;
+var y,a,i,b=1;
+var arr=[];
+ for(i=0;x!=0;i++)
+{
+ a=x%10;
+ arr[i]=a;
+ x=parseInt(x/10);
+ b++;
+}
+b--;
+x=0;
+for(i=0;i<b;i++)
+{
+x=x*10+arr[i];
+}
+
+document.getElementById("ans").innerHTML="The number after reversed is:"+x;
+console.log(x);
+}
+</script>
+</html>

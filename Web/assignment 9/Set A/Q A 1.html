@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align:center;font-size:40px;"><br><br>
+<b id="ans"></b>
+
+
+</body>
+<script>
+
+var welcome;
+const date=new Date();
+var hour=date.getHours();
+var minute=date.getMinutes();
+var second=date.getSeconds();
+if(minute<10)
+{
+minute="0"+minute;
+}
+if(second<10)
+{
+second="0"+second;
+}
+if(hour<12)
+{
+ welcome="Good Morning";
+}
+else
+if(hour<17)
+{
+welcome="Good Afternoon";
+}
+else
+if(hour>17)
+{
+welcome="Good Evening";
+}
+console.log(welcome);
+document.getElementById("ans").innerHTML=""+welcome+"<br><br>";
+document.write(hour+":"+minute+":"+second);
+</script>
+</html>

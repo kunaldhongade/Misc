@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align:center;font-size:40px;">
+
+</body>
+<script>
+
+
+let p=prompt("Enter password:");
+var pass=["pass123"];
+var i,chance=3;
+for(i=0;i<chance;i++)
+{
+ if(p==pass)
+ {
+     document.write(p+" is currect password.");
+	 break;
+ }
+ else
+ {
+    chance--;
+	alert("Only"+chance+"Chance remaining.");
+	pass=prompt("Enter Password");
+}
+}console.log(chance);
+console.log(i);
+if(i>chance)
+{
+document.write("You loose your chances try again later.");
+}
+
+
+</script>
+</html>

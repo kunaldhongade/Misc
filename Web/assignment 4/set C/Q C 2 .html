@@ -1,0 +1,135 @@
+<!DOCTYPE  html>
+<html>
+<style>
+input {
+padding:8px;
+}
+h1{
+font-size:50px;
+text-align:center;
+}
+body{
+font-size:30px;
+text-align:center-left;
+}
+</style>
+<head>
+<h1>Registration Form.</h1>
+<hr>
+</head>
+<body>
+
+<form>
+<b>Student Name:
+<input type="text" id="sname" placeholder="Enter surname first.">
+</b><br><br>
+<b>Address:
+<textarea id="saddr"name="addr"placeholder="Enter full address with pincode."></textarea>
+</b><br><br>
+<b>Gender 
+<select name="Gender" id="sgender">
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+  <option value="Intersex">Intersex</option>
+ </select>
+ </b>
+<br><br>
+<b>D.O.B.:<input type="data" id="dob" placeholder="DD/MM/YYYY"></b><br><br>
+<b>Birthplace:
+<select name="place" id="place">
+  <option value="Maharashtra">Maharashtra</option>
+  <option value="Gujrat">Gujrat</option>
+  <option value="GOA">GOa</option>
+   <option value="Bihar">Bihar</option> 
+   <option value="Delhi">Delhi</option>
+   <option value="Rajasthan">Rajasthan</option>
+   <option value="Telengana">Telengana</option> 
+   <option value="Madhya Pradash">Madhya Pradash</option> 
+   <option value="Punjab">Punjab</option>
+   <option value="Jammu Kashmir">Jammu Kashmir</option> 
+   <option value="Uttarakhand">Uttarakhand</option> 
+   <option value="Tamil">Tamil</option>
+   <option value="Karnataka">Karnataka</option>
+   <option value="Odisha">Odisha</option>
+   <option value="West Bengal">West Bengal</option>
+   <option value="Jharkhand">Jharkhand</option> 
+   <option value="Assam">Assam</option>
+   <option value="Kerala">Kerala</option>
+  <option value="Other">Other</option>
+</select></b><br><br>
+<b>Telephone:<input type="number" id="tel" name="phone">
+<br><br>
+<b>Email <input type="email" id="semail"placeholder="example123@gamil.com"  pattern=".+@globex\.com" size="30" required></b><br><br>
+<b>Courses:
+<select name="place" id="course">
+  <option value="11th Arts">11th Arts</option>
+  <option value="11th Commarce">11th Commarce</option>
+  <option value="11th Science">11th Science</option>
+   <option value="12th Arts">12th Arts</option> 
+   <option value="12th commarce">12th commarce</option>
+   <option value="12th Science">12th Science</option>
+   <option value="FY.B.C.A.">FY.B.C.A</option> 
+   <option value="FY.B.B.A.">FT.B.B.A.</option> 
+   <option value="FY.BCS">FY.BCS</option>
+   <option value="Graduation">Graduation</option> 
+   <option value="FY.BSC">FY.BSC</option>
+   <option value="fy.BVOC">FY.BVOC</option>
+</select></b><br><br>
+ <input type="reset" value="Clear" name="clear">
+ 
+
+<input type="submit" value="Submit" onclick="saveFile()">
+
+
+</form><br><br><br>
+<iframe src="collageinfo.html" title="collage info" height="400" width="1200"></iframe>
+<script>
+    let saveFile = () => {
+ 
+        // Get the data from each element on the form.
+    	const name = document.getElementById('sname');
+        const addr = document.getElementById('saddr');
+		const gender=document.getElementById('sgender');
+		const dob=document.getElementById('dob');
+        const email = document.getElementById('semail');
+        const Bplace = document.getElementById('place');
+		const tel=document.getElementById('tel');
+        const course = document.getElementById('course');
+        
+        // This variable stores all the data.
+        let data = 
+            '\r Name: ' + name.value + ' \r\n ' + 
+            'Address: ' +addr.value + ' \r\n ' + 
+			'Gender: ' + gender.value + ' \r\n ' + 
+			'D.O.B: ' + dob.value + ' \r\n ' + 
+			'Email: ' + email.value + ' \r\n ' + 
+            'Birth place: ' + Bplace.value + ' \r\n ' + 
+            'Telephone: ' + tel.value + ' \r\n ' + 
+            'Course: ' +course.value;
+        
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'formData.txt';	   // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click(); 
+    }
+</script>
+
+
+
+
+
+</body>
+</html>

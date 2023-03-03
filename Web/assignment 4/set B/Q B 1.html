@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html> 
+<style>
+
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+</style>
+<head>
+
+<h1 style="text-align:center;">Feedback Form</h1>
+</head>
+
+<body style="text-align:center;font-size:30px;border:1px solid black;">
+<form name="myForm" action="\phpfile.html"  onsubmit="return validateForm()" method="post" required>
+
+
+<b>Student Name:<input type="text" name="myname" value=""></b><br><br>
+
+<b>Student E-Mail:<input type="email" name="myemail" value=""></b><br><br>
+
+<b>How do you know this Institute<select name="reference" >
+  <option value="Through Collage Management">Through Collage Management</option>
+  <option value="Through Persnal Reference">Through Persnal Reference</option>
+  <option value="Through Website">Through Website</option>
+  <option value="Other">Other</option>
+</select></b><br><br>
+
+<b>How do you rate the faculty</b>
+<label class="container">
+  <input type="radio" checked="checked" name="radio">Poor
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+  <input type="radio" checked="checked" name="radio">Good
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+  <input type="radio" checked="checked" name="radio">Very Good
+  <span class="checkmark"></span>
+</label>
+<label class="container">
+  <input type="radio"  name="radio">Excellent
+  <span class="checkmark"></span>
+</label>
+
+<br><br>
+<b>Suggestions for the bettermant of faculty and institute</b><br>
+<label for="sujation"></label>
+
+<textarea id="sujetion" name="sujation" rows="4" cols="50"></textarea>
+
+  <br><input type="submit" value="Submit">
+<br><input type="reset" value="clear"> 
+</form>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["myname"].value;
+  var y = document.forms["myForm"]["myemail"].value;
+ 
+  
+  if (x == "" || x == null) {
+    alert("Name must be filled out");
+    return false;
+  }
+  if (y == "" || y == null) {
+    alert("Email must be filled out");
+    return false;
+	}
+}
+</script>
+ 
+</body>
+</html>
